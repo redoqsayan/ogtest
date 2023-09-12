@@ -49,8 +49,8 @@ function App() {
       <Helmet>
         <title>{data?.store_name}</title>
         <meta charSet="utf-8" />
-        <meta property="description" content={data?.store_Banner} />
-        <meta property="og:title" content={data?.store_name} />
+        <meta name="description" property="description" content={data?.store_Banner ? data?.store_Banner:"no data" } />
+        <meta property="og:title" content={data?.store_name ? data?.store_name : "no store name"} />
         <meta property="og:description" content={data?.store_Banner} />
         <meta property="og:image" content={data?.store_Banner_Image} />
         <meta property="twitter:title" content={data?.store_name} />
