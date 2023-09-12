@@ -44,6 +44,7 @@ function App() {
         <div>{data?.store_Name}</div>
       </div>
       <Helmet>
+      <title>{data?.store_name}</title>
         <meta property="og:title" content={data?.store_name} />
         <meta property="og:description" content={data?.store_Banner} />
         <meta property="og:image" content={data?.store_Banner_Image} />
