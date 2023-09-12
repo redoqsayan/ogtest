@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async"
 
 const Seo = ({title, description, image}) => {
   return (
+     <>
      <Helmet>
      <title>{title}</title>
      <meta name="description" content={description} />
@@ -14,6 +15,12 @@ const Seo = ({title, description, image}) => {
      <meta name="twitter:title" content={title} />
      <meta name="twitter:description" content={description} />
    </Helmet>
+   <div>
+     <h1>{title}</h1>
+     <p>{description}</p>
+     <img src={image} />
+   </div>
+   </>
      )
 }
 

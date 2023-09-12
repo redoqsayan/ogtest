@@ -25,6 +25,7 @@ function Home() {
   useEffect(() => {
     fetchData();
   }, []);
+
   return (
     <div>
       <div
@@ -44,12 +45,17 @@ function Home() {
         <div>{data?.store_Banner}</div>
         <img src={data?.store_Banner_Image} />
       </div>
-      <Seo
-        title={data?.store_Name}
-        description={data?.store_Banner}
-        image={data?.store_Banner_Image}
-        key={data?.store_Name}
-      />
+      {data &&
+        data?.store_Name &&
+        data?.store_Banner &&
+        data?.store_Banner_Image && (
+          <Seo
+            title={data?.store_Name}
+            description={data?.store_Banner}
+            image={data?.store_Banner_Image}
+            key={data?.store_Name}
+          />
+        )}
     </div>
   );
 }
