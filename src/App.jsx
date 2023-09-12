@@ -47,15 +47,13 @@ function App() {
         <img src={data?.store_Banner_Image} />
       </div>
       <Helmet>
-        <title>{data?.store_name}</title>
+        <title>{data?.store_Name}</title>
+
         <meta charSet="utf-8" />
         <meta name="description" property="description" content={data?.store_Banner ? data?.store_Banner:"no data" } />
         <meta property="og:title" content={data?.store_name ? data?.store_name : "no store name"} />
         <meta property="og:description" content={data?.store_Banner} />
-        <meta property="og:image" content={data?.store_Banner_Image} />
-        <meta property="twitter:title" content={data?.store_name} />
-        <meta property="twitter:description" content={data?.store_Banner} />
-        <meta property="twitter:image" content={data?.store_Banner_Image} />
+        {/* <meta property="og:image" content={data?.store_Banner_Image} /> */}
       </Helmet>
     </div>
   );
