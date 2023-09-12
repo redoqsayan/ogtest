@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [data, setdata] = useState();
@@ -48,7 +48,7 @@ function App() {
       </div>
       <Helmet>
         <title>{data?.store_name}</title>
-
+        <meta charSet="utf-8" />
         <meta property="description" content={data?.store_Banner} />
         <meta property="og:title" content={data?.store_name} />
         <meta property="og:description" content={data?.store_Banner} />
